@@ -52,3 +52,19 @@ kotlin.sourceSets["test"].kotlin.srcDirs("test")
 
 sourceSets["main"].resources.srcDirs("resources")
 sourceSets["test"].resources.srcDirs("testresources")
+
+val serverJarLocation = "./build/libs/example-0.0.1-all.jar"
+
+task("stage") {
+    dependsOn(":shadowJar")
+}
+
+task("checkStage") {
+    dependsOn("stage")
+    doLast {
+        val jarFile = file(serverJarLocation)
+        if (!jarFile.exists()) {
+            throw GradleException("File $serverJarLocation does not exist")
+        }
+    }
+}
