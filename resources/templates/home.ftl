@@ -2,22 +2,18 @@
 <head>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
-<body>
-<div class="homeContainer">
-    <span class="homeHeader">This is a message for those who ever had a problem of broken Ubuntu run</span>
-    <span class="homeHeader">Click the button bellow to see secret information about what to do when you broke your ubuntu</span>
-</div>
-<img
-        src="../static/ubuntu.png"
-        alt="There must be an image of Ubuntu's animal"
-        class="homeImage"
->
-<form action="/"
-      method="post"
-      enctype="application/x-www-form-urlencoded"
-      class="homeRedirectForm"
->
-    <input class="homeRedirectButton" type="submit" value="Go to info">
-</form>
-</body>
+    <body>
+        <div class="homeContainer">
+            <span class="homeHeader">Привет! Введи пароль, чтобы войти в комнату ожидания:</span>
+        </div>
+        <#if notification??>
+            <p class="wrongAnswer">Нужно, чтобы подключились оба. Подождём</p>
+            <p class="wrongAnswer">${notification}</p>
+        </#if>
+        <form action="/" method="post" enctype="application/x-www-form-urlencoded">
+            <div>Password:</div>
+            <div><input type="text" name="password" /></div>
+            <div><input type="submit" value="Enter" /></div>
+        </form>
+    </body>
 </html>

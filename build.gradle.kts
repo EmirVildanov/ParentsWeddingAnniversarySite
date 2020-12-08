@@ -33,6 +33,8 @@ dependencies {
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-server-host-common:$ktor_version")
     implementation("io.ktor:ktor-serialization:$ktor_version")
+    implementation("io.ktor:ktor-websockets:1.3.1")
+    implementation("io.ktor:ktor-client-websockets:1.3.1")
     implementation("io.ktor:ktor-gson:$ktor_version")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0")
     implementation("io.ktor:ktor-freemarker:1.4.2")
