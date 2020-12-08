@@ -1,0 +1,40 @@
+body {
+    background: #B9D8FF;
+}
+
+.wrongAnswer {
+    color: brown;
+}
+
+.homeContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeHeader {
+    font-size: 3rem;
+}
+
+.homeImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.homeRedirectForm {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeRedirectButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoText {
+    display: inline-block;
+    font-size: 2rem;
+}
